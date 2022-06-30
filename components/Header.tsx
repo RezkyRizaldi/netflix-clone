@@ -3,9 +3,11 @@ import { BellIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import useAuth from '../hooks/useAuth';
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
+	const { logout } = useAuth();
 
 	useEffect(() => {
 		const handleScroll = () => (scrollY > 0 ? setIsScrolled(true) : setIsScrolled(false));
@@ -66,11 +68,11 @@ const Header = () => {
 				<SearchIcon className="hidden h-6 w-6 sm:inline" />
 				<p className="hidden lg:inline">Kids</p>
 				<BellIcon className="h-6 w-6" />
-				<Link href="/account">
-					<a className="inline-flex">
-						<Image className="rounded" src="https://rb.gy/g1pwyx" width={24} height={24} alt="" />
-					</a>
-				</Link>
+				{/* <Link href="/account"> */}
+				{/* <a className="inline-flex"> */}
+				<Image className="rounded" src="https://rb.gy/g1pwyx" width={24} height={24} alt="" onClick={logout} />
+				{/* </a> */}
+				{/* </Link> */}
 			</div>
 		</header>
 	);

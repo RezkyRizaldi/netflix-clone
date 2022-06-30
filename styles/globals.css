@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-dark-primary text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600;
+		@apply bg-dark-primary text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-netflix;
 	}
 
 	header {

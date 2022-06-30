@@ -13,11 +13,17 @@ module.exports = {
 				dark: {
 					primary: '#141414',
 					secondary: '#010511',
+					tertiary: '#181818',
 				},
 				light: {
 					primary: '#e5e5e5',
 					secondary: '#b3b3b3',
 				},
+				input: {
+					primary: '#333',
+					secondary: '#454545',
+				},
+				netflix: '#e50914',
 			},
 		},
 	},
